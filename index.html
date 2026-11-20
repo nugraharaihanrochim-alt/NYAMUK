@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dengung — Dunia Nyamuk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Nyamuk kecil di latar & progress bar -->
+<div id="swarm" aria-hidden="true"></div>
+<div id="bar"></div>
+
+<!-- ========== NAVIGASI ========== -->
+<nav>
+  <a href="#hero" class="logo">Dengung</a>
+  <div>
+    <a href="#kenal">Kenali</a>
+    <a href="#anatomi">Anatomi</a>
+    <a href="#siklus">Siklus</a>
+    <a href="#jenis">Jenis</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#data">Data</a>
+    <a href="#cegah">Cegah</a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header id="hero">
+  <div class="hero-text">
+    <h1>Hewan paling mematikan di dunia <span>beratnya 2,5 miligram.</span></h1>
+    <p>Kenali nyamuk dari ujung belalai sampai ujung sayap: tubuhnya, cara hidupnya, penyakit yang dibawanya, dan cara menghentikannya. Gerakkan kursor — nyamuknya akan mengejar.</p>
+    <a class="btn" href="#kenal">Mulai menjelajah</a>
+  </div>
+  <div id="hero-mosq" class="hero-mosq"></div>
+  <div class="hum">Sayapnya mengepak sampai 600 kali per detik</div>
+</header>
+
+<!-- ========== KENALI ========== -->
+<section id="kenal" class="wrap">
+  <h2>Siapa sebenarnya nyamuk?</h2>
+  <div class="grid3">
+    <article class="card reveal"><b>Serangga bersayap dua</b><p>Nyamuk termasuk famili Culicidae, ordo Diptera. Ada lebih dari 3.500 spesies di seluruh dunia, hampir di semua benua kecuali Antartika.</p></article>
+    <article class="card reveal"><b>Hanya betina yang menggigit</b><p>Betina butuh protein dari darah untuk mematangkan telurnya. Nyamuk jantan dan betina sehari-hari minum nektar dan getah tumbuhan.</p></article>
+    <article class="card reveal"><b>Pendeteksi yang tajam</b><p>Nyamuk mencari mangsa lewat karbon dioksida napas, panas tubuh, bau keringat, dan warna gelap, dari jarak puluhan meter.</p></article>
+  </div>
+</section>
+
+<!-- ========== ANATOMI ========== -->
+<section id="anatomi" class="wrap dark">
+  <h2>Anatomi: klik bagian tubuhnya</h2>
+  <div class="anat">
+    <div id="anat-mosq" class="anat-mosq"></div>
+    <div>
+      <div class="chips" id="chips"></div>
+      <div class="info" id="anat-info">
+        <h3>Pilih satu bagian</h3>
+        <p>Tiap bagian tubuh nyamuk punya tugas khusus. Klik tombol di atas dan bagian itu akan menyala.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SIKLUS HIDUP ========== -->
+<section id="siklus" class="wrap">
+  <h2>Siklus hidup: empat tahap, 7–14 hari</h2>
+  <p class="lead">Tiga tahap pertama hidup di air. Itu sebabnya genangan sekecil tutup botol pun bisa jadi sarang.</p>
+  <div class="cycle">
+
+    <div class="stage reveal">
+      <svg viewBox="0 0 120 100">
+        <g class="svg-telur">
+          <ellipse class="egg" cx="30" cy="55" rx="7" ry="12"/>
+          <ellipse class="egg" cx="50" cy="50" rx="7" ry="12" style="animation-delay:.3s"/>
+          <ellipse class="egg" cx="70" cy="55" rx="7" ry="12" style="animation-delay:.6s"/>
+          <ellipse class="egg" cx="90" cy="50" rx="7" ry="12" style="animation-delay:.9s"/>
+        </g>
+        <path class="svg-air" d="M10 78q50 10 100 0"/>
+      </svg>
+      <h3>1. Telur</h3>
+      <p>Betina bertelur 100–200 butir sekali waktu, di permukaan atau dinding air. Menetas dalam 1–2 hari. Telur Aedes tahan kering berbulan-bulan.</p>
+    </div>
+
+    <div class="stage reveal">
+      <svg viewBox="0 0 120 100">
+        <g class="wiggle">
+          <path class="svg-jentik" d="M25 60q20-25 40 0t40 0"/>
+          <circle class="svg-jentik-kepala" cx="22" cy="60" r="8"/>
+        </g>
+        <path class="svg-air" d="M10 80q50 10 100 0"/>
+      </svg>
+      <h3>2. Jentik</h3>
+      <p>Bergelantung di bawah permukaan air, bernapas lewat tabung kecil, dan makan mikroorganisme. Berganti kulit empat kali dalam 5–7 hari.</p>
+    </div>
+
+    <div class="stage reveal">
+      <svg viewBox="0 0 120 100">
+        <g class="bob">
+          <path class="svg-kepompong" d="M40 40a22 22 0 1 1 20 34q-18 0-20-34z"/>
+          <circle class="svg-mata" cx="52" cy="52" r="4"/>
+          <path class="svg-ekor" d="M72 36l8-10M76 42l10-6"/>
+        </g>
+        <path class="svg-air" d="M10 84q50 10 100 0"/>
+      </svg>
+      <h3>3. Kepompong</h3>
+      <p>Tidak makan, tetapi tetap aktif bergerak. Di dalamnya tubuh dewasa terbentuk selama 1–3 hari.</p>
+    </div>
+
+    <div class="stage reveal">
+      <div class="mini" id="mini-mosq"></div>
+      <h3>4. Dewasa</h3>
+      <p>Muncul ke permukaan, mengeringkan sayap, lalu terbang. Betina kawin sekali dan bisa bertelur seumur hidupnya yang 2–4 minggu.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== JENIS NYAMUK ========== -->
+<section id="jenis" class="wrap dark">
+  <h2>Tiga nyamuk yang perlu Anda kenal</h2>
+  <div class="tabs" id="tabs"></div>
+  <div class="species" id="species"></div>
+</section>
+
+<!-- ========== GALERI ========== -->
+<section id="galeri" class="wrap">
+  <h2>Galeri: nyamuk dari dekat</h2>
+  <p class="lead">Klik foto untuk memperbesar. Foto dimuat dari Wikimedia Commons; bila gagal dimuat, otomatis diganti ilustrasi.</p>
+  <div class="gallery" id="gallery"></div>
+</section>
+<div id="lightbox"><button aria-label="Tutup">×</button><div id="lb-box"></div><p id="lb-cap"></p></div>
+
+<!-- ========== DATA ========== -->
+<section id="data" class="wrap dark">
+  <h2>Angka-angka yang bicara</h2>
+  <div class="grid4">
+    <div class="stat reveal"><strong data-to="3500" data-suf="+">0</strong><span>spesies nyamuk di dunia</span></div>
+    <div class="stat reveal"><strong data-to="263" data-suf=" juta">0</strong><span>kasus malaria di dunia, 2023 (WHO)</span></div>
+    <div class="stat reveal"><strong data-to="597" data-suf=" ribu">0</strong><span>kematian akibat malaria, 2023 (WHO)</span></div>
+    <div class="stat reveal"><strong data-to="14" data-suf=" juta">0</strong><span>kasus dengue dunia, 2024 (WHO)</span></div>
+  </div>
+
+  <h3 class="sub">Kematian per tahun akibat hewan (perkiraan, ribu orang)</h3>
+  <div class="bars" id="bars"></div>
+  <p class="note">Angka bersifat perkiraan dari laporan WHO dan sumber publik; selalu cek rilis terbaru.</p>
+
+  <h2 class="sub2">Demam berdarah di Indonesia</h2>
+  <p class="lead">Data Kementerian Kesehatan RI. Kasus 2024 dicatat sampai minggu ke-23 (Juni), sehingga angka akhir tahun lebih tinggi.</p>
+  <div class="grid4">
+    <div class="stat reveal"><strong data-to="114720">0</strong><span>kasus DBD sepanjang 2023</span></div>
+    <div class="stat reveal"><strong data-to="894">0</strong><span>kematian DBD sepanjang 2023</span></div>
+    <div class="stat reveal"><strong data-to="131501">0</strong><span>kasus DBD 2024, sampai minggu ke-23</span></div>
+    <div class="stat reveal"><strong data-to="799">0</strong><span>kematian DBD 2024, sampai minggu ke-23</span></div>
+  </div>
+  <h3 class="sub">Lima kota/kabupaten dengan kasus tertinggi (minggu ke-17, 2024)</h3>
+  <div class="bars" id="bars2"></div>
+  <p class="note">Target Kemenkes: 10 kasus per 100.000 penduduk dan nol kematian DBD pada 2030. Saat ini rata-rata 20–50 per 100.000. Sumber: Kemenkes RI.</p>
+</section>
+
+<!-- ========== CEGAH 3M PLUS ========== -->
+<section id="cegah" class="wrap">
+  <h2>Cegah: 3M Plus</h2>
+  <p class="lead">Centang langkah yang sudah Anda lakukan di rumah, lalu lihat skor perlindungan Anda.</p>
+  <div class="check" id="check"></div>
+  <div class="score">
+    <div id="meter"><i></i></div>
+    <p id="score-text">Belum ada langkah dipilih.</p>
+  </div>
+</section>
+
+<!-- ========== MITOS & FAKTA ========== -->
+<section class="wrap dark">
+  <h2>Mitos atau fakta? Klik kartunya</h2>
+  <div class="grid3" id="myths"></div>
+</section>
+
+<footer>Dengung — situs edukasi tentang nyamuk. Bila demam tinggi mendadak, segera periksa ke fasilitas kesehatan.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
